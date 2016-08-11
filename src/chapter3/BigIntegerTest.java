@@ -1,14 +1,14 @@
 package chapter3;
 
-import java.math.*;
-import java.util.*;
+import java.math.BigInteger;
+import java.util.Scanner;
 
 /**
  * This program used big numbers to compute the odds of winning the grand prize
  * in a lottery.
  * 
  * @version 1.20 2004-02-10
- * @author ’≈”Ó∑…
+ * @author Zhang Yufei
  */
 public class BigIntegerTest {
 	public static void main(String[] args) {
@@ -27,9 +27,12 @@ public class BigIntegerTest {
 		BigInteger lotteryOdds = BigInteger.valueOf(1);
 
 		for (int i = 1; i <= k; i++) {
-			lotteryOdds = lotteryOdds.multiply(BigInteger.valueOf(n - k + 1).divide(BigInteger.valueOf(i)));
+			lotteryOdds = lotteryOdds.multiply(BigInteger.valueOf(n - i + 1))
+					.divide(BigInteger.valueOf(i));
 		}
 		
 		System.out.println("Your odds are 1 in " + lotteryOdds + ". Good luck!");
+		
+		in.close();
 	}
 }
