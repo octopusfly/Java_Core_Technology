@@ -11,6 +11,7 @@ public class Employee extends Person {
 
     public Employee(String n, double s, int year, int month, int day) {
         super(n);
+        name = n;
         salary = s;
         GregorianCalendar calendar = new GregorianCalendar(year, month - 1, day);
         hireDay = calendar.getTime();
