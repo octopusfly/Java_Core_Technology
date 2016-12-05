@@ -5,6 +5,7 @@ import java.lang.reflect.*;
 
 /**
  * This program uses reflection to print all features of a class.
+ * 
  * @version 1.1 2016-12-05
  * @author Zhang Yufei
  */
