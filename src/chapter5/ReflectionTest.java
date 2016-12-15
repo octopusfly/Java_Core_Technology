@@ -237,7 +237,7 @@ public class ReflectionTest {
         System.out.print("\n\nExtends chain:\n    ");
         printType(cl);
         Class superclass = cl.getSuperclass();
-        while (superclass != Object.class) {
+        while (superclass != null && superclass != Object.class) {
             System.out.print(" --> ");
             printType(superclass);
             superclass = superclass.getSuperclass();
