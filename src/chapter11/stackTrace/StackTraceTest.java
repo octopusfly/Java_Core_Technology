@@ -36,5 +36,6 @@ public class StackTraceTest {
 		System.out.print("Enter n: ");
 		int n = scan.nextInt();
 		factorial(n);
+		scan.close();
 	}
 }
